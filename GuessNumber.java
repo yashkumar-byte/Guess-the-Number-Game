@@ -5,6 +5,8 @@ class Game{
     public int number;
     public int inputNumber;
     public int noOfGuesses = 0;
+    private Scanner sc =new
+    Scanner(System.in);
 
     public int getNoOfGuesses() {
         return noOfGuesses;
@@ -16,11 +18,10 @@ class Game{
 
     Game(){
         Random rand = new Random();
-        this.number = rand.nextInt(100);
+        this.number = rand.nextInt(100)+1;
     }
     void takeUserInput(){
-        System.out.println("Guess the number");
-        Scanner sc = new Scanner(System.in);
+        System.out.println("Guess the number(1-100):");
         inputNumber = sc.nextInt();
     }
     boolean isCorrectNumber(){
@@ -36,10 +37,13 @@ class Game{
         }
         return false;
     }
+    void closeScanner(){
+        sc.close();
+    }
 }
 
 public class GuessNumber {
-    static void main() {
+    public static void main(String[] args) {
 
         Game g = new Game();
         boolean b = false;
@@ -47,5 +51,6 @@ public class GuessNumber {
         g.takeUserInput();
         b =g.isCorrectNumber();
         }
+        g.closeScanner();
     }
 }
