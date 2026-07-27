@@ -17,6 +17,7 @@ A simple Java console-based game where the user tries to guess a randomly genera
 1. Compile the program:
 <br>
    javac GuessNumber.java
+
 2. Run:
 <br>
    java GuessNumber
