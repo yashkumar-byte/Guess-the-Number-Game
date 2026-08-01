@@ -21,7 +21,7 @@ class Game{
         this.number = rand.nextInt(100)+1;
     }
     void takeUserInput(){
-        System.out.println("Guess The Number(1-100):");
+        System.out.println("Guess the Number(1-100):");
         inputNumber = sc.nextInt();
     }
     boolean isCorrectNumber(){
